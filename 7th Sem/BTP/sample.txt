@@ -1,0 +1,302 @@
+\documentclass[12pt,a4paper]{report}
+
+\usepackage{amsthm,amssymb,mathrsfs,setspace}%amsmath, latexsym,footmisc
+
+% \usepackage{pstcol}
+% \usepackage{play}
+\usepackage{epsfig}
+%\usepackage[grey,times]{quotchap}
+\usepackage[nottoc]{tocbibind}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+%
+
+\input xy
+\xyoption{all}
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{notation}[theorem]{Notation}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\renewcommand{\baselinestretch}{1.5}
+
+
+
+
+\begin{document}
+
+%\pagenumbering{arabic} \setcounter{page}{1}
+
+% --------------- Title page -----------------------
+
+\begin{titlepage}
+\enlargethispage{3cm}
+
+\begin{center}
+
+\vspace*{-2cm}
+
+\textbf{\Large SMART CLASSROOM}
+
+\vfill
+
+ A Project Report Submitted \\
+for the Course \\[1cm]
+
+{\bf\Large\ CS498 Project ~I }\\[.1in]
+
+ \vfill
+
+{\large \emph{by}}\\[5pt]
+{\large\bf {Abhishek Sarkar}}\\[5pt]
+{\large (Roll No. 11010101)}\\
+{\large\bf {Kartheek Nagelli}}\\[5pt]
+{\large (Roll No. 11010145)}
+
+\vfill
+\includegraphics[height=2.5cm]{iitglogo}
+
+\vspace*{0.5cm}
+
+{\em\large to the}\\[10pt]
+{\bf\large DEPARTMENT OF CSE} \\[5pt]
+{\bf\large \mbox{INDIAN INSTITUTE OF TECHNOLOGY GUWAHATI}}\\[5pt]
+{\bf\large GUWAHATI - 781039, INDIA}\\[10pt]
+{\it\large November 2014}
+\end{center}
+
+\end{titlepage}
+
+\clearpage
+
+% --------------- Certificate page -----------------------
+\pagenumbering{roman} \setcounter{page}{2}
+\begin{center}
+{\Large{\bf{CERTIFICATE}}}
+\end{center}
+%\thispagestyle{empty}
+
+
+\noindent
+This is to certify that the work contained in this project report
+entitled ``{\bf Smart Classroom using Calm Technology}" submitted
+by {\bf Abhishek Sarkar and Kartheek Nagelli} ({\bf Roll No.: 11010101 and 11010145 respectively}) to Department of CSE, Indian Institute of Technology Guwahati
+towards the requirement of the course \textbf{CS498 Project~I}
+has been carried out by them under my
+supervision.
+
+\vspace{4cm}
+
+\noindent Guwahati - 781 039 \hfill (Dr. Samit Bhattacharya)
+
+\noindent November 2014 \hfill Project Supervisor
+
+\clearpage
+
+% --------------- Abstract page -----------------------
+\begin{center}
+{\Large{\bf{ABSTRACT}}}
+\end{center}
+
+
+Smart classroom is an application based on calm technology to demonstrate the use of ubiquitous computing in a classroom environment. We have decided on implementing the following features:
+\begin{itemize}
+  \item Smart doubt processing before it is presented to instructor
+  \item Showing relevant data in real time as slides are being taught
+  \item Cached set of related keywords for the students to explore \ldots
+\end{itemize}
+
+\clearpage
+
+
+
+\tableofcontents
+\clearpage
+\listoffigures
+\listoftables
+
+
+\newpage
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% =========== Main chapters starts here. Type in separate files and include the filename here. ==
+% ============================
+
+\input chapter1.tex
+
+
+\input chapter2.tex
+
+
+
+\nocite{golub} \nocite{gerla}\nocite{m1}\nocite{chang}
+
+\bibliographystyle{plain}
+\bibliography{bib.bib}
+
+\end{document}
+
+\documentclass[12pt,a4paper]{report}
+
+\usepackage{amsthm,amssymb,mathrsfs,setspace}%amsmath, latexsym,footmisc
+
+% \usepackage{pstcol}
+% \usepackage{play}
+\usepackage{epsfig}
+%\usepackage[grey,times]{quotchap}
+\usepackage[nottoc]{tocbibind}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+%
+
+\input xy
+\xyoption{all}
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{notation}[theorem]{Notation}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\renewcommand{\baselinestretch}{1.5}
+
+
+
+
+\begin{document}
+
+%\pagenumbering{arabic} \setcounter{page}{1}
+
+% --------------- Title page -----------------------
+
+\begin{titlepage}
+\enlargethispage{3cm}
+
+\begin{center}
+
+\vspace*{-2cm}
+
+\textbf{\Large SMART CLASSROOM}
+
+\vfill
+
+ A Project Report Submitted \\
+for the Course \\[1cm]
+
+{\bf\Large\ CS498 Project ~I }\\[.1in]
+
+ \vfill
+
+{\large \emph{by}}\\[5pt]
+{\large\bf {Abhishek Sarkar}}\\[5pt]
+{\large (Roll No. 11010101)}\\
+{\large\bf {Kartheek Nagelli}}\\[5pt]
+{\large (Roll No. 11010145)}
+
+\vfill
+\includegraphics[height=2.5cm]{iitglogo}
+
+\vspace*{0.5cm}
+
+{\em\large to the}\\[10pt]
+{\bf\large DEPARTMENT OF CSE} \\[5pt]
+{\bf\large \mbox{INDIAN INSTITUTE OF TECHNOLOGY GUWAHATI}}\\[5pt]
+{\bf\large GUWAHATI - 781039, INDIA}\\[10pt]
+{\it\large November 2014}
+\end{center}
+
+\end{titlepage}
+
+\clearpage
+
+% --------------- Certificate page -----------------------
+\pagenumbering{roman} \setcounter{page}{2}
+\begin{center}
+{\Large{\bf{CERTIFICATE}}}
+\end{center}
+%\thispagestyle{empty}
+
+
+\noindent
+This is to certify that the work contained in this project report
+entitled ``{\bf Smart Classroom using Calm Technology}" submitted
+by {\bf Abhishek Sarkar and Kartheek Nagelli} ({\bf Roll No.: 11010101 and 11010145 respectively}) to Department of CSE, Indian Institute of Technology Guwahati
+towards the requirement of the course \textbf{CS498 Project~I}
+has been carried out by them under my
+supervision.
+
+\vspace{4cm}
+
+\noindent Guwahati - 781 039 \hfill (Dr. Samit Bhattacharya)
+
+\noindent November 2014 \hfill Project Supervisor
+
+\clearpage
+
+% --------------- Abstract page -----------------------
+\begin{center}
+{\Large{\bf{ABSTRACT}}}
+\end{center}
+
+
+Smart classroom is an application based on calm technology to demonstrate the use of ubiquitous computing in a classroom environment. We have decided on implementing the following features:
+\begin{itemize}
+  \item Smart doubt processing before it is presented to instructor.
+  \item Showing relevant data in real time as slides are being taught.
+  \item Cached set of related keywords for the students to explore.
+\end{itemize}
+
+\clearpage
+
+
+
+\tableofcontents
+\clearpage
+\listoffigures
+\listoftables
+
+
+\newpage
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% =========== Main chapters starts here. Type in separate files and include the filename here. ==
+% ============================
+
+\input chapter1.tex
+
+
+\input chapter2.tex
+
+
+
+\nocite{golub} \nocite{gerla}\nocite{m1}\nocite{chang}
+
+\bibliographystyle{plain}
+\bibliography{bib.bib}
+
+\end{document}
+

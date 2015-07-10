@@ -1,0 +1,274 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% baposter Landscape Poster
+% LaTeX Template
+% Version 1.0 (11/06/13)
+%
+% baposter Class Created by:
+% Brian Amberg (baposter@brian-amberg.de)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+
+\documentclass[landscape,a0paper,fontscale=0.325]{baposter} % Adjust the font scale/size here
+
+
+
+\usepackage{graphicx} % Required for including images
+\graphicspath{{figures/}} % Directory in which figures are stored
+
+\usepackage{amsmath} % For typesetting math
+\usepackage{amssymb} % Adds new symbols to be used in math mode
+
+\usepackage{booktabs} % Top and bottom rules for tables
+\usepackage{enumitem} % Used to reduce itemize/enumerate spacing
+\usepackage{palatino} % Use the Palatino font
+\usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
+
+\usepackage{multicol} % Required for multiple columns
+\setlength{\columnsep}{1.5em} % Slightly increase the space between columns
+\setlength{\columnseprule}{0mm} % No horizontal rule between columns
+
+\usepackage{tikz} % Required for flow chart
+\usetikzlibrary{shapes,arrows} % Tikz libraries required for the flow chart in the template
+\usepackage{multirow,bigstrut}
+\usepackage{subfigure}
+
+
+ 
+\newcommand{\compresslist}{ % Define a command to reduce spacing within itemize/enumerate environments, this is used right after \begin{itemize} or \begin{enumerate}
+\setlength{\itemsep}{1pt}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+}
+
+\definecolor{lightblue}{rgb}{0.145,0.6666,1} % Defines the color used for content box headers
+\definecolor{darkbrown}{rgb}{0.4,0,0}
+\definecolor{lowerbg}{rgb}{0.9,0.8,0.5}
+\definecolor{upperbg}{rgb}{1,1,1}
+\begin{document}
+
+\begin{poster}
+{
+background=shadetb,
+headerborder=closed, % Adds a border around the header of content boxes
+colspacing=1em, % Column spacing
+bgColorOne=upperbg, % Background color for the gradient on the left side of the poster
+bgColorTwo=lowerbg, % Background color for the gradient on the right side of the poster
+borderColor=lightblue, % Border color
+headerColorOne=black, % Background color for the header in the content boxes (left side)
+headerColorTwo=lightblue, % Background color for the header in the content boxes (right side)
+headerFontColor=white, % Text color for the header text in the content boxes
+boxColorOne=white, % Background color of the content boxes
+textborder=roundedleft, % Format of the border around content boxes, can be: none, bars, coils, triangles, rectangle, rounded, roundedsmall, roundedright or faded
+eyecatcher=true, % Set to false for ignoring the left logo in the title and move the title left
+headerheight=0.1\textheight, % Height of the header
+headershape=roundedright, % Specify the rounded corner in the content box headers, can be: rectangle, small-rounded, roundedright, roundedleft or rounded
+headerfont=\Large\bf\textsc, % Large, bold and sans serif font in the headers of content boxes
+%textfont={\setlength{\parindent}{1.5em}}, % Uncomment for paragraph indentation
+linewidth=2pt % Width of the border lines around content boxes
+}
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION 
+%----------------------------------------------------------------------------------------
+%
+{\includegraphics[height=6em]{logo.jpg}} % First university/lab logo on the left
+{\bf\textsc{ \color{darkbrown}On Emulating Idiotypic Networks\footnote[1]{S.S.Jha, K.Shrivastava and S.B.Nair,"On Emulating Real-World Distributed Intelligence Using Mobile Agent Based Localized Idiotypic
+Networks," MIKE 2013, Vol. 8284, LNCS Springer International Publishing, pp.487-498}}\vspace{0.5em}} % Poster title
+{\textsc{Shashi Shekhar Jha} \{\MakeLowercase{\texttt{ j.shashi@iitg.ernet.in}}\} \hspace{12pt} \textsc{Indian Institute of Technology Guwahati}{\\ \scriptsize \texttt{\textbf{http://www.iitg.ernet.in/cse/robotics/}}}} % Author names and institution 
+{\includegraphics[height=6em]{logo.jpg}} % Second university/lab logo on the right
+
+%----------------------------------------------------------------------------------------
+%	Intro
+%----------------------------------------------------------------------------------------
+
+\headerbox{Introduction}{name=intro,column=0,row=0}{
+{\small \begin{itemize}
+\item Jerne's Idiotypic network~\cite{jerne1974towards} is inherently autonomous and has the ability of self-tuning. It postulates that the antibodies within the body interact with one-another even in the absence of an antigen.
+\item Researchers have always assumed that the concentration of a specific antibody within the network is single-valued, which is easily manipulated as a global parameter in simulated systems. 
+\item We describe herein a novel architecture and related dynamics to \emph{emulate} Jerne's Idiotypic network wherein mobile agents acting as antibodies within a real physical network interact at antigen-affected nodes, sense their actual respective global populations stigmergically and form \emph{\textbf{Localized Idiotypic Networks}}(\emph{\textbf{LIN}}) that eventually control their respective global populations (concentrations) across the network. 
+\end{itemize}}
+
+%\vspace{0.3em} % When there are two boxes, some whitespace may need to be added if the one on the right has more content
+%\item Researchers have used Idiotypic Network~\cite{jerne1974towards} in a myriad of applications ranging from function optimization to pattern recognition, learning and even robotics and control.
+}
+
+%----------------------------------------------------------------------------------------
+%	Agent
+%----------------------------------------------------------------------------------------
+
+\headerbox{Mobile Agents}{name=agent,column=0,row=0, below = intro}{
+{\small \begin{itemize}
+  \item Mobile agents are autonomous chunks of software programs that can migrate within a network, carry payload, clone whenever required and even terminate themselves.
+  \item These agents provide for a possible solution to emulate various population-based computational models in real systems. E.g.:
+    \begin{itemize}
+    \item Immune system based multi-robot system \cite{godfrey2008}.
+     \item System for intrusion/anomaly detection~\cite{dasgupta1999immunity}.
+   \end{itemize}
+\end{itemize}}
+%\vspace{0.3em} % When there are two boxes, some whitespace may need to be added if the one on the right has more content
+}
+
+%----------------------------------------------------------------------------------------
+%	On Emulating Real-world Distributed Intelligence using Mobile Agent based Localized Idiotypic Networks
+%----------------------------------------------------------------------------------------
+
+\headerbox{MOBILE AGENTS EMULATING AN IDIOTYPIC NETWORK}{name=model,column=1,span=2,row=0}{
+
+\begin{multicols}{2}
+\vspace{1em}
+\begin{center}
+\includegraphics [width = 6cm, height = 6cm] {Scenario.png}  (a)\\
+\includegraphics [width = 4cm, height = 3 cm]{concentration.png} (b)
+\includegraphics[width = 3cm, height = 3cm] {antigen-antibody.png}
+(c)
+\captionof{figure}{(a) The emulated Idiotypic network model based architecture (b) An approximate visualization of the spatial distribution of antibody concentration and the localized Idiotypic network (c) Antigen and antibody in the proposed architecture}
+ \label{fig:scenario}
+\end{center}
+
+{\small \begin{itemize}
+\item The emulated Idiotypic network consists of a physical network comprising $n$ nodes (computers) as shown in Figure \ref{fig:scenario}(a).
+\item Figure \ref{fig:scenario}(b) depicts the envisaged \emph{Localized Idiotypic Network} wherein stimulations and suppressions are exchanged only locally at the sites where an antigenic attack occurs.
+\item  The set of networked nodes acts as the body of the system,\emph{ parts} (nodes) of which need to be \emph{defended} or \emph{serviced} by providing the best set of antibodies.
+\item A set of mobile agents move through the network of nodes and comprise (carry) the antibodies.
+\item  Each node hosts a mobile agent platform to facilitate all mobile agent related functions including migration, cloning, antigen-antibody affinity measurements and generation of stimulations and suppressions. 
+\item Antigenic attacks can be viewed as a service required at a node while the antibodies that nullify these attacks could be seen as the relevant service providers. 
+\item During migration whenever an antibody finds the antigen-antibody affinity higher than a threshold it becomes the \emph{candidate antibody} and migrates towards the node-under-attack.
+\item Various \emph{candidate antibodies} form their local population at the node-under-attack out of which the one with maximum local population is selected.
+\end{itemize}}
+
+\end{multicols}
+}
+%----------------------------------------------------------------------------------------
+% 	CONCLUSION
+%----------------------------------------------------------------------------------------
+\headerbox{Conclusions}{name=conclusion,column = 0, below = agent}{
+{\small \begin{itemize}
+  \item This work presents the manner in which the emulation of a real open-world model of an Idiotypic Network on a physical network of computers, can be conceived.
+  \item Results have shown how stigmergy based local interactions can help generate \emph{\textbf{Localized Idiotypic Networks}}, which in turn govern and control the respective global populations of antibodies across the network.
+  \item The emulation results also show how the populations of the more effective antibodies grow while the others die out and are thus removed from the network.
+  \item The network seems to be able to converge onto the more generic antibodies that are able to neutralize a set of varied antigens.
+\end{itemize}}
+
+
+}
+%----------------------------------------------------------------------------------------
+%	RESULTS 
+%----------------------------------------------------------------------------------------
+
+\headerbox{Results}{name=results,column=3,row = 0}{ 
+\includegraphics [width = 8.7cm, height = 3.5cm] {graph1.png}
+\captionof{figure}{Antibody population in the system when the same antigen was presented at five different nodes}
+ \label{fig:conc1}
+ 
+ \includegraphics[width = 8.7cm, height = 3.5cm] {graph2.png}
+ \caption{Antibody population in the system when four different types of antigens were presented at five different nodes}
+  \label{fig:conc2}
+ 
+\includegraphics [width = 8.7cm, height = 3.5cm] {graph3.png}
+\caption{Immunity of the system when four different types of antigens were presented at five different nodes}
+ \label{fig:immunity}
+\vspace{0.5em}
+\includegraphics [width = 8.7cm] {snaps.png}
+\caption{Snapshots of the LINs formed during the rounds}
+ \label{fig:snap}
+}
+
+%----------------------------------------------------------------------------------------
+%	Dynamics
+%----------------------------------------------------------------------------------------
+
+\headerbox{Underlying Dynamics}{name=dyna,column=1,span=2,row=0,below=model,bottomaligned = results}{
+\small
+\begin{center}
+\textbf{Farmer's computational model \cite{farmer1986immune}:}\\
+Change in Concentration of an antibody = Antigenic Stimulation ($AgSt$) + Stimulations received from other antibodies ($St$) - Suppressions from the selected antibodies ($Su$) - Deletions due to disuse or lapse of Lifetime ($Lt$)
+\end{center}
+\begin{multicols}{2}
+\textbf{$\ast$ Antigen-Antibody interaction:}
+{\tiny \begin{equation}\label{eq:affinity}
+  \psi(A_g, A_i) = \frac{1}{(Epitopes~of~Ag) ~XNOR~ (Paratopes~of~A_i)}
+\end{equation}}
+\textbf{$\ast$ Emulating Danger signals:}
+ Danger signals are modelled similar to the pheromone diffusion model proposed by Godfrey $et~al.$ \cite{godfrey2012pheromone}.
+ \begin{center}
+\includegraphics [width = 7cm]{Danger.png}
+ \end{center}
+ 
+ 
+\textbf{$\ast$ Antibody migration:}
+The mobile agents that represent the antibodies continuously migrate based on a combination of conscientious and danger signal oriented strategies similar to the one described in \cite{godfrey2012pheromone}.
+\vskip 0.5em
+\textbf{$\ast$ Lifetime($Lt$):}
+Each antibody has been conferred a fixed lifetime in terms of hop-counts to reside within the network.
+\vskip 0.5em
+\textbf{$\ast$ Stigmergy based Antibody Population (Concentration) Control:}
+For all antibodies belonging to the local population, $a_i \in A_i$, the value of $\tau$ (an \textit{activation} \textit{factor}) is given by -
+{\tiny \begin{equation}
+ \label{eq:tau}
+ \tau_{new}^{a_i} = \left\{
+ \begin{array}{l}
+ \tau_{old}^{a_i} + AgSt + St,\mbox{Stimulation}\\
+ \tau_{old}^{a_i} - Su, \hbox{Suppression} \\
+\end{array}\right.
+\end{equation}}
+
+where,
+{\tiny \begin{equation}\label{eq:Agst}
+AgSt = \eta \psi(a_g, a_i)
+\end{equation}
+
+\begin{equation}\label{eq:St}
+ St = \lambda_1 \frac{\sum_{x \in A_{Selected}}\tau^{a_x} }{\sum_{y \in A_{NotSelected}}\tau^{a_y} }
+\end{equation}
+
+\begin{equation}\label{eq:Su}
+ Su = \lambda_2 \{\phi(A_{Selected}) - \phi(A_i)\}
+\end{equation}}
+
+{\tiny \noindent $\tau \in [\tau_{min}, \tau_{max}]$ \\
+$\eta$ = Antigen stimulation factor (non-zero positive value)\\
+$a_i$ = The $i^{th}$ candidate antibody\\
+$a_g$ = Antigen at the node-under-attack\\
+$A_i$ = The antibodies forming the local population of the $i^{th}$ candidate antibody that have arrived at the node-under-attack\\
+$A_{Selected}$ = The local population of the selected type of candidate antibody used to neutralize the antigen\\
+$A_{NotSelected}$ = The local population of those non-selected candidate antibodies\\
+$\phi(A_i)$ = The population of set of antibodies $A_i$\\
+$\lambda_{1}$ and $\lambda_{2}$ constitute the stimulation and suppression factors respectively which are positive non-zero values.}
+\vskip 0.5em
+\textbf{$\ast$ Change in population:}\\
+For each candidate antibody $a_i$:
+\begin{center}
+{\tiny \textbf{\textit{If}} \{$\tau^{a_i}$ $\geq$ $\tau_{max}$ \} \textbf{\textit{then}} \textit{ clone $a_{i}$, $\tau^{a_i}=0$, $\tau^{a_i}_{clone} = 0$}
+
+\textbf{\textit{Else If }} \{$\tau^{a_i}$ $\leq$ $\tau_{min}$ \} \textbf{\textit{then}} \textit{terminate $a_{i}$ }}
+\end{center}
+\end{multicols}
+}
+%----------------------------------------------------------------------------------------
+%	REFERENCES
+%----------------------------------------------------------------------------------------
+
+\headerbox{References}{name=ref,column=0,below = conclusion,bottomaligned = dyna}{
+
+\renewcommand{\section}[2]{\vskip 0.05em} % Get rid of the default "References" section title
+%\nocite{*} % Insert publications even if they are not cited in the poster
+\tiny{ % Reduce the font size in this block
+\bibliographystyle{unsrt}
+\bibliography{ref2}
+}}
+
+%----------------------------------------------------------------------------------------
+
+\end{poster}
+
+\end{document}
